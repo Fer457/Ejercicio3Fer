@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio3Fer</string>
+    <string name="edhint">Introduce texto</string>
+    <string name="switchstring">Cámbialo</string>
+    <string name="strbtn">Haz click</string>
+    <string name="tv1string">Ejercicio 2 Fer</string>
+</resources>
