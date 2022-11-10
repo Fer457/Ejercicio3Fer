@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
     <TextView
+        android:textColor="@color/black"
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv1string"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -21,8 +23,10 @@
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
+        android:textColorHint="@color/black"
+        android:shadowColor="@color/black"
         android:id="@+id/ed1"
-        android:layout_width="wrap_content"
+        android:layout_width="@android:dimen/thumbnail_width"
         android:layout_height="wrap_content"
         android:hint="@string/edhint"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,9 +34,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv1"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.223"
+        android:inputType="text"
+        android:autofillHints="name" />
 
     <androidx.appcompat.widget.SwitchCompat
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,6 +53,9 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <Button
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="35sp"
         android:id="@+id/btn1"
         android:text="@string/strbtn"
         android:layout_width="wrap_content"
