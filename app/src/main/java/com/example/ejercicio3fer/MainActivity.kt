@@ -1,38 +1,32 @@
 package com.example.ejercicio3fer
 
+import com.example.ejercicio3fer.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.widget.SwitchCompat
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    val boton1 = findViewById<Button>(R.id.btn1)
-    val edtext1 = findViewById<EditText>(R.id.ed1)
-    val swt1 = findViewById<SwitchCompat>(R.id.switch1)
-
-        boton1.setOnClickListener {
-            if (edtext1.text.isEmpty()){
+        binding.btn1.setOnClickListener {
+            if (binding.ed1.text.isEmpty()){
                 Toast.makeText(this, "El texto está vacío", Toast.LENGTH_SHORT).show()
             }
             else {
-                if (swt1.isChecked){
-                    val snack = Snackbar.make(it,"Hola ${edtext1.text}",Snackbar.LENGTH_LONG)
-                    snack.show()
+                if (binding.switch1.isChecked){
+                    Snackbar.make(it,"Hola ${binding.ed1.text}",Snackbar.LENGTH_LONG).show()
                 }
                 else{
-                    Toast.makeText(this, "Hola ${edtext1.text}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Hola ${binding.ed1.text}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
-
-
     }
 
 
